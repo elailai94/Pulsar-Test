@@ -1,0 +1,103 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
+  <modelVersion>4.0.0</modelVersion>
+
+  <groupId>com.elishalai</groupId>
+  <artifactId>pulsar-tests</artifactId>
+  <packaging>jar</packaging>
+  <version>1.0-SNAPSHOT</version>
+  <name>Pulsar Tests</name>
+  <url>http://maven.apache.org</url>
+
+  <dependencies>
+    <dependency>
+      <groupId>com.yahoo.pulsar</groupId>
+      <artifactId>pulsar-client</artifactId>
+      <version>1.18</version>
+    </dependency>
+  </dependencies>
+
+  <profiles>
+    <profile>
+      <id>producer</id>
+      <dependencies>
+        <dependency>
+          <groupId>com.yahoo.pulsar</groupId>
+          <artifactId>pulsar-client</artifactId>
+          <version>1.18</version>
+        </dependency>
+      </dependencies>
+      <build>
+        <plugins>
+          <plugin>
+            <groupId>org.codehaus.mojo</groupId>
+            <artifactId>exec-maven-plugin</artifactId>
+            <version>1.6.0</version>
+            <executions>
+              <execution>
+                <phase>package</phase>
+                <goals>
+                  <goal>java</goal>
+                </goals>
+              </execution>
+            </executions>
+            <configuration>
+              <mainClass>com.elishalai.Producer</mainClass>
+              <arguments>
+                <!-- Server Address -->
+                <argument>localhost</argument>
+                <!-- Server Port -->
+                <argument>6650</argument>
+                <!-- Number of Messages -->
+                <argument>2</argument>
+                <!-- Message Size (In Bytes) -->
+                <argument>4096</argument>
+              </arguments>
+              <cleanupDaemonThreads>false</cleanupDaemonThreads>
+            </configuration>
+          </plugin>
+        </plugins>
+      </build>
+    </profile>
+
+    <profile>
+      <id>consumer</id>
+      <dependencies>
+        <dependency>
+          <groupId>com.yahoo.pulsar</groupId>
+          <artifactId>pulsar-client</artifactId>
+          <version>1.18</version>
+        </dependency>
+      </dependencies>
+      <build>
+        <plugins>
+          <plugin>
+            <groupId>org.codehaus.mojo</groupId>
+            <artifactId>exec-maven-plugin</artifactId>
+            <version>1.6.0</version>
+            <executions>
+              <execution>
+                <phase>package</phase>
+                <goals>
+                  <goal>java</goal>
+                </goals>
+              </execution>
+            </executions>
+            <configuration>
+              <mainClass>com.elishalai.Consumer</mainClass>
+              <arguments>
+                <!-- Server Address -->
+                <argument>localhost</argument>
+                <!-- Server Port -->
+                <argument>6650</argument>
+                <!-- Number of Messages -->
+                <argument>2</argument>
+              </arguments>
+              <cleanupDaemonThreads>false</cleanupDaemonThreads>
+            </configuration>
+          </plugin>
+        </plugins>
+      </build>
+    </profile>
+  </profiles>
+</project>
