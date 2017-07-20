@@ -47,7 +47,7 @@
                 <!-- Server Address -->
                 <argument>localhost</argument>
                 <!-- Server Port -->
-                <argument>6650</argument>
+                <argument>8080</argument>
                 <!-- Number of Messages -->
                 <argument>2</argument>
                 <!-- Message Size (In Bytes) -->
@@ -89,7 +89,7 @@
                 <!-- Server Address -->
                 <argument>localhost</argument>
                 <!-- Server Port -->
-                <argument>6650</argument>
+                <argument>8080</argument>
                 <!-- Number of Messages -->
                 <argument>2</argument>
               </arguments>

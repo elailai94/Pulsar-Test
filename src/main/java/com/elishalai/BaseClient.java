@@ -24,7 +24,7 @@ public abstract class BaseClient {
 
   // Perform client initialization
   protected void initialize() throws Exception {
-    String connectionURL = String.format("pulsar://%s:%d", serverAddress, serverPort);
+    String connectionURL = String.format("http://%s:%d", serverAddress, serverPort);
     client = PulsarClient.create(connectionURL);
   }
 
