@@ -1,7 +1,8 @@
 //=============================================================================
 // Pulsar-Tests
 //
-// @description: Module for providing functions to work with Producer objects
+// @description: Module for providing functions to work with ProducerClient
+//   objects
 // @author: Elisha Lai
 // @version: 1.0 27/06/2017
 //=============================================================================
@@ -13,7 +14,7 @@ import java.nio.ByteBuffer;
 
 import com.yahoo.pulsar.client.api.Producer;
 
-public class Producer extends BaseClient {
+public class ProducerClient extends BaseClient {
   private static final int LONG_SIZE = 4;
   private static final String QUEUE_NAME =
     "persistent://sample/standalone/ns1/testQueue";
@@ -33,22 +34,22 @@ public class Producer extends BaseClient {
       throughputLogWriter = new Logger("producer-throughput.csv");
       throughputLogWriter.logThroughputLogHeader();
 
-      new Producer(serverAddress, serverPort).run();
+      new ProducerClient(serverAddress, serverPort).run();
       System.out.println("Producer executed successfully.");
-    } catch (Exception e) {
+    } catch (Exception exception) {
       System.out.println("Producer wasn't able to execute successfully. An error has occurred.");
-      e.printStackTrace();
+      exception.printStackTrace();
     } finally {
       throughputLogWriter.close();
     }
   }
 
   // Constructor
-  private Producer(String serverAddress, int serverPort) {
+  private ProducerClient(String serverAddress, int serverPort) {
     super(serverAddress, serverPort);
   }
 
-  // Receive messages from the server
+  // Send messages to the server
   private void run() throws Exception {
     try {
       // Initialize the base client
@@ -71,8 +72,8 @@ public class Producer extends BaseClient {
       // Calculate the throughput of the producer
       double throughput = calculateThroughput(numMessages, duration);
       throughputLogWriter.logThroughputLogEntry(numMessages, duration, throughput);
-    } catch (Exception e) {
-      throw e;
+    } catch (Exception exception) {
+      throw exception;
     } finally {
       if (producer != null) {
         producer.close();

@@ -42,7 +42,7 @@
               </execution>
             </executions>
             <configuration>
-              <mainClass>com.elishalai.Producer</mainClass>
+              <mainClass>com.elishalai.ProducerClient</mainClass>
               <arguments>
                 <!-- Server Address -->
                 <argument>localhost</argument>
@@ -84,7 +84,7 @@
               </execution>
             </executions>
             <configuration>
-              <mainClass>com.elishalai.Consumer</mainClass>
+              <mainClass>com.elishalai.ConsumerClient</mainClass>
               <arguments>
                 <!-- Server Address -->
                 <argument>localhost</argument>
