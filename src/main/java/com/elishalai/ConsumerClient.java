@@ -107,8 +107,9 @@ public class ConsumerClient extends BaseClient {
   // Get the message ID from the message
   long getMessageID(Message message) throws Exception {
     String messageID = message.getProperty(MESSAGE_ID_KEY);
-
-    return Long.parseLong(messageID);
+    System.out.println(messageID);
+    //return Long.parseLong(messageID);
+    return 1;
   }
 
   // Get the sent timestamp from the message
