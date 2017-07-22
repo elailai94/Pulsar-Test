@@ -43,6 +43,9 @@ case $OS in
     # Resynchronizing package index files from their sources
     echo "Resynchronizing package index files from their sources..."
     sudo apt-get update
+    # Install  NTP package
+    echo "Installing NTP package..."
+    sudo apt-get install ntp
     # Install Maven package
     echo "Installing Maven package..."
     sudo apt-get install maven
@@ -55,6 +58,9 @@ case $OS in
       echo "Installing Homebrew..."
       ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
     fi
+    # Install NTP package
+    echo "Installing NTP package..."
+    brew install ntp
     # Install Maven package
     echo "Installing Maven package..."
     brew install maven

@@ -28,7 +28,7 @@ The server address, server port, number of messages and message size can be conf
 ### Testbed
 Each compute cluster is an identical configuration of the following components:
 
-- 1x Supermicro SSG-6047R-E1R36L Large compute node consisting of:
+- 1x Supermicro SSG-6047R-E1R36L large compute node consisting of:
   - 2x Intel E5-2630v2 CPU
   - 256GB RAM
   - 14x 2TB 7200RPM SAS2 hard drives (LSI HBA-connected)
