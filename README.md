@@ -1,6 +1,6 @@
 # Pulsar-Tests
 ### About
-This repository contains a program to measure the performance and scalability of [Pulsar](http://pulsar.incubator.apache.org/). It is written entirely in Java.
+This repository contains a program to measure the performance and scalability of [Pulsar](http://pulsar.incubator.apache.org/). The program is written entirely in Java. Pulsar is an open-source distributed pub
 
 ### Setup
 In a new terminal window, download the Pulsar binaries and install the packages by running:
@@ -23,7 +23,7 @@ mvn -DskipTests -Pproducer package
 ```
 
 ### Configuration
-The server address, server port, number of messages and message size can be configured in the *pom.xml* file by modifying lines.
+The server address, server port, number of messages and message size can be configured by modifying lines 52-59 and 94-99 in the **pom.xml** file respectively.
 
 ### License
 * This repository is licensed under the [MIT License](https://github.com/elailai94/Pulsar-Tests/blob/master/LICENSE.md).
