@@ -1,10 +1,10 @@
 #!/bin/bash
 
 #=================================================================
-# Pulsar-Tests
+# Pulsar-Test
 #
 # 
-# @description: Setup script for Pulsar-Tests
+# @description: Setup script for Pulsar-Test
 # @author: Elisha Lai
 # @version: 1.0 29/06/2017
 #=================================================================

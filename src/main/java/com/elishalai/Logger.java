@@ -1,5 +1,5 @@
 //=============================================================================
-// Pulsar-Tests
+// Pulsar-Test
 //
 // @description: Module for providing functions to work with Logger objects
 // @author: Elisha Lai
