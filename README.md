@@ -20,6 +20,10 @@ mvn -DskipTests -Pconsumer package
 In a new terminal window, start the producer by running:
 ```Bash
 mvn -DskipTests -Pproducer package
+```
+
+### Configuration
+The server address, server port, number of messages and message size can be configured in the *pom.xml* file by modifying lines.
 
 ### License
 * This repository is licensed under the [MIT License](https://github.com/elailai94/Pulsar-Tests/blob/master/LICENSE.md).
