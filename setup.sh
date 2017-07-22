@@ -15,6 +15,7 @@ rm -rf bin
 rm -rf conf
 rm -rf data
 rm -rf lib
+rm -rf *.csv
 
 # Download Pulsar distribution
 echo "Downloading Pulsar distribution..."

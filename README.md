@@ -25,5 +25,25 @@ mvn -DskipTests -Pproducer package
 ### Configurations
 The server address, server port, number of messages and message size can be configured by modifying lines 52-59 and 94-99 in the **pom.xml** file respectively.
 
+### Testbed
+Each compute cluster is an identical configuration of the following components:
+
+- 1x Supermicro SSG-6047R-E1R36L Large compute node consisting of:
+  - 2x Intel E5-2630v2 CPU
+  - 256GB RAM
+  - 14x 2TB 7200RPM SAS2 hard drives (LSI HBA-connected)
+  - 1x Intel S3700 400GB SATA3 SSD
+  - 1x Intel P3700 400GB PCIe NVMe solid-state storage device
+  - 4x Intel i350 gigabit Ethernet ports
+  - 1x Mellanox 40GbE QSFP port
+- 15x Supermicro SYS-6017R-TDF compute nodes. Each consisting of:
+  - 2x Intel E5-2620v2 CPU
+  - 64 GB RAM
+  - 3x 1TB SATA3 hard drives
+  - 1x Intel S3700 200GB SATA3 SSD
+  - 2x Intel i350 gigabit Ethernet ports
+  - 1x Mellanox 10GbE SFP port
+- 1x Mellanox SX1012 10/40 GbE 12-port cluster switch
+
 ### License
 * This repository is licensed under the [MIT License](https://github.com/elailai94/Pulsar-Tests/blob/master/LICENSE.md).
