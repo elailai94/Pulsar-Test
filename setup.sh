@@ -13,6 +13,7 @@
 echo "Cleaning project directory..."
 rm -rf bin
 rm -rf conf
+rm -rf data
 rm -rf lib
 
 # Download Pulsar distribution
