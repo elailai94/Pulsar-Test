@@ -18,7 +18,6 @@ public class ConsumerClient extends BaseClient {
   private static final String QUEUE_NAME =
     "persistent://sample/standalone/ns1/testQueue";
   private static final String SUBSCRIPTION_NAME = "testSubscription";
-  private static final String MESSAGE_ID_KEY = "sequence_id";
 
   private static int numMessages = -1;
   private static Logger latencyLogWriter = null;
@@ -80,7 +79,7 @@ public class ConsumerClient extends BaseClient {
           messagesCount += 1;
           duration += (endTime - startTime);
 
-          long messageID = getMessageID(message);
+          int messageID = messagesCount;
           long sentTimestamp = getSentTimestamp(message);
           long receivedTimestamp = System.currentTimeMillis();
           long latency = receivedTimestamp - sentTimestamp;
@@ -102,14 +101,6 @@ public class ConsumerClient extends BaseClient {
       // Clean up the base client
       cleanup();
     }
-  }
-
-  // Get the message ID from the message
-  long getMessageID(Message message) throws Exception {
-    String messageID = message.getProperty(MESSAGE_ID_KEY);
-    System.out.println(messageID);
-    //return Long.parseLong(messageID);
-    return 1;
   }
 
   // Get the sent timestamp from the message

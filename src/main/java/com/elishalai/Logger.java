@@ -28,7 +28,7 @@ public class Logger {
   }
 
   // Log latency log entry to the log file
-  public void logLatencyLogEntry(long messageID, long sentTimestamp,
+  public void logLatencyLogEntry(int messageID, long sentTimestamp,
     long receivedTimestamp, long latency) throws Exception {
     String entry =
       String.format("%d,%d,%d,%d", messageID, sentTimestamp,
