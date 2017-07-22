@@ -54,7 +54,7 @@
                 <!-- Server Port -->
                 <argument>8080</argument>
                 <!-- Number of Messages -->
-                <argument>2</argument>
+                <argument>5</argument>
                 <!-- Message Size (In Bytes) -->
                 <argument>4096</argument>
               </arguments>
@@ -96,7 +96,7 @@
                 <!-- Server Port -->
                 <argument>8080</argument>
                 <!-- Number of Messages -->
-                <argument>2</argument>
+                <argument>5</argument>
               </arguments>
               <cleanupDaemonThreads>false</cleanupDaemonThreads>
             </configuration>
