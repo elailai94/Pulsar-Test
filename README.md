@@ -22,8 +22,11 @@ In a new terminal window, start the producer by running:
 mvn -DskipTests -Pproducer package
 ```
 
-### Configurations
-The server address, server port, number of messages and message size can be configured by modifying lines 52-59 and 94-99 in the **pom.xml** file respectively.
+### Configuration
+The server address, server port, number of messages and message size can be configured by modifying lines *52-59* and *94-99* in the **pom.xml** file respectively.
+
+### Plotting
+
 
 ### Testbed
 Each compute cluster is an identical configuration of the following components:
