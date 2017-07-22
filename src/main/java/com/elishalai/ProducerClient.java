@@ -61,7 +61,7 @@ public class ProducerClient extends BaseClient {
       // Produce messages to the queue
       long duration = 0;
       for (int i = 0; i < numMessages; i++) {
-        byte[] message = generateMessageBody(messageSize);
+        byte[] message = createMessage(messageSize);
 
         long startTime = System.currentTimeMillis();
         producer.send(message);
@@ -84,8 +84,8 @@ public class ProducerClient extends BaseClient {
     }
   }
 
-  // Generate message body
-  private byte[] generateMessageBody(int size) {
+  // Create message
+  private byte[] createMessage(int size) {
     byte[] bytes = new byte[size + LONG_SIZE];
     Random random = new Random();
 
