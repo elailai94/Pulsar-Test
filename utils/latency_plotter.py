@@ -15,7 +15,7 @@ import matplotlib.pyplot as plt
 # Plot histogram of latencies
 def plot_histogram(data):
     num_messages, latency = np.histogram(data, bins='auto')
-    plt.title("Histogram of HornetQ End-to-End Latency")
+    plt.title("Histogram of Pulsar End-to-End Latency")
     plt.xlabel("Latency (ms)")
     plt.ylabel("Number of Messages")
     plt.plot(latency[:-1], num_messages)
@@ -28,7 +28,7 @@ def plot_cdf(data):
     sorted_data = np.sort(data)
     num_data_points = data.size
     probability = np.array(range(num_data_points)) / float(num_data_points)
-    plt.title("CDF of HornetQ End-to-End Latency")
+    plt.title("CDF of Pulsar End-to-End Latency")
     plt.xlabel("Latency (ms)")
     plt.ylabel("Probability")
     plt.plot(sorted_data, probability)
