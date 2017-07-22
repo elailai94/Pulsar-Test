@@ -9,8 +9,8 @@
 
 package com.elishalai;
 
-import java.util.Random;
 import java.nio.ByteBuffer;
+import java.util.Random;
 
 import com.yahoo.pulsar.client.api.Producer;
 
