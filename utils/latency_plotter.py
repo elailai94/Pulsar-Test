@@ -1,7 +1,7 @@
 #!/usr/bin/env python
 
 # =============================================================================
-#  HornetQ-Tests
+#  Pulsar-Test
 #
 #  @author: Elisha Lai
 #  @description: Utility script to plot the latencies
