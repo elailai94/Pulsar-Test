@@ -17,7 +17,6 @@ public class Logger {
   
   // Constructor
   public Logger(String fileName) throws Exception {
-    String filePath = String.format("./results/%s", fileName);
     loggerWriter = new BufferedWriter(new FileWriter(new File(fileName)));
   }
 

@@ -1,4 +1,4 @@
-#!/usr/bin/env python
+#!/usr/bin/env python3
 
 # =============================================================================
 #  Pulsar-Test
@@ -20,6 +20,7 @@ def plot_histogram(data):
     plt.ylabel("Number of Messages")
     plt.plot(latency[:-1], num_messages)
     plt.savefig("latency-histogram.png")
+    plt.close()
 
 
 # Plot cumulative distribution function of latencies
@@ -32,6 +33,7 @@ def plot_cdf(data):
     plt.ylabel("Probability")
     plt.plot(sorted_data, probability)
     plt.savefig("latency-cdf.png")
+    plt.close()
 
 
 def main():
