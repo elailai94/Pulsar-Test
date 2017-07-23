@@ -95,7 +95,8 @@ public class ProducerClient extends BaseClient {
     // Put current timestamp in the first four bytes of the byte array
     ByteBuffer buffer = ByteBuffer.wrap(bytes);
     buffer.putLong(System.currentTimeMillis());
+    byte[] message = buffer.array();
 
-    return buffer.array();
+    return message;
   }
 }

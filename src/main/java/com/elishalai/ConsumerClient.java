@@ -107,7 +107,8 @@ public class ConsumerClient extends BaseClient {
   long getSentTimestamp(Message message) throws Exception {
     byte[] messageBody = message.getData();
     ByteBuffer buffer = ByteBuffer.wrap(messageBody);
+    long sentTimestamp = buffer.getLong();
 
-    return buffer.getLong();
+    return sentTimestamp;
   }
 }
